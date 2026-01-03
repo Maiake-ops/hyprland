@@ -13,6 +13,8 @@ rm -rf ~/.config/rofi/config.rasi
 rm -rf ~/.config/fish/config.fish 
 rm -rf ~/.config/waybar
 mkdir ~/.config/waybar
+mkdir ~/.config/starship
+cp -r starship.toml ~/.config/starship
 cp -r style.css ~/.config/waybar
 cp -r config ~/.config/waybar
 cp -r config.rasi ~/.config/rofi/config.rasi
