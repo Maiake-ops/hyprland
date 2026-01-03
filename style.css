@@ -1,0 +1,95 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Roboto";
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(3, 4, 25, 0.85); /* Slightly more opaque for readability */
+    color: #d6bbf8;
+    transition-property: background-color;
+    transition-duration: .5s;
+    border-bottom: 2px solid rgba(23, 33, 136, 0.5); /* Subtle bottom border */
+}
+
+/* Container for each group of modules */
+.modules-left, .modules-center, .modules-right {
+    padding: 4px 10px;
+}
+
+#workspaces {
+    background: rgba(6, 57, 142, 0.2);
+    margin: 4px 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(214, 187, 248, 0.1);
+}
+
+#workspaces button {
+    padding: 0px 10px;
+    color: #6f78ff;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #d6bbf8;
+    background: #06398e;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(6, 57, 142, 0.5);
+}
+
+#workspaces button:hover {
+    background: rgba(214, 187, 248, 0.15);
+    color: #d6bbf8;
+}
+
+#window {
+    font-weight: bold;
+    color: #d6bbf8;
+}
+
+/* Styling modules as individual pills */
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#battery,
+#clock,
+#tray {
+    padding: 0 14px;
+    margin: 4px 4px;
+    background: rgba(214, 187, 248, 0.08); /* Faint highlight background */
+    border-radius: 10px;
+}
+
+/* Specific color accents for status */
+#clock {
+    color: #d6bbf8;
+    font-weight: bold;
+}
+
+#battery.charging {
+    color: #a6e3a1; /* Greenish for charging */
+}
+
+#battery.warning:not(.charging) {
+    color: #f38ba8; /* Reddish for low battery */
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#pulseaudio.muted {
+    color: #6c7086;
+}
+
+@keyframes blink {
+    to {
+        background-color: rgba(243, 139, 168, 0.2);
+        color: #f38ba8;
+    }
+}
