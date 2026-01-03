@@ -110,8 +110,10 @@ echo "🐚 Changing default shell to Fish..."
 chsh -s $(which fish)
 
 git clone https://github.com/Maiake-ops/hyprland/
+cd hyprland
 mv a.jpg ~/.config/hypr/
 mv hyprpaper.conf ~/.config/hypr/
+rm -rf hyprland
 
 
 echo "✅ Installation Complete!"
