@@ -22,5 +22,6 @@ cp -r hyprland.conf ~/.config/hypr/
 cp -r hyprpaper.conf ~/.config/hypr/
 cp -r a.jpg ~/.config/hypr/
 cp -r config.fish ~/.config/fish/
+chsh -s $(which fish)
 cd ~ rm -rf hyprland
 echo reboot ur system
