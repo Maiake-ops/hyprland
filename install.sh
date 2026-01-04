@@ -2,7 +2,7 @@
 sudo pacman -S hyprland hyprpaper pipewire-pulse wireplumber fish rofi brightnessctl kitty rfkill arandr gnome-control-center gnome-calculator git
 git clone https://github.com/Maiake-ops/hyprland/
 cd hyprland
-git clone https://aur.archlinux/yay.git
+git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd ..
