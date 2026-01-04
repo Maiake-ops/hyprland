@@ -7,12 +7,15 @@ cd yay
 makepkg -si
 cd ..
 yay localsend-bin
-rm -rf ~/.config/hypr/hyprland.conf
-rm -rf ~/.config/rofi/config.rasi
-rm -rf ~/.config/fish/config.fish 
-rm -rf ~/.config/waybar
-mkdir ~/.config/waybar
-mkdir ~/.config/starship
+rm -rf ~/.config/hypr/
+rm -rf ~/.config/rofi/
+rm -rf ~/.config/fish/ 
+rm -rf ~/.config/waybar/
+mkdir -p ~/.config/hypr/
+mkdir -p ~/.config/rofi/
+mkdir -p ~/.config/fish/
+mkdir -p ~/.config/waybar/
+mkdir -p ~/.config/starship/
 cp -r starship.toml ~/.config/starship
 cp -r style.css ~/.config/waybar
 cp -r config ~/.config/waybar
