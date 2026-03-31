@@ -42,11 +42,7 @@ elif [ "$DISTRO" = "gentoo" ]; then
         dev-vcs/git
 fi
 
-# ---------------- CLONE DOTFILES ---------------- #
 
-cd ~
-git clone https://github.com/Maiake-ops/hyprland.git
-cd hyprland
 
 # ---------------- AUR (ARCH ONLY) ---------------- #
 
